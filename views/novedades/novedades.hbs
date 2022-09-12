@@ -1,0 +1,38 @@
+<nav class="contenedor-nav">
+  <ul class="nav-lista" id="nav-lista">
+    <li class="lista-item item-usuario" activeclass="activo">{{nombre}}</li>
+    <li class="lista-item item-seccion" activeclass="activo"><a href="/admin/plantel">Plantel</a></li>
+    <li class="lista-item item-seccion" activeclass="activo"><a href="/admin/novedades">Novedades</a></li>
+    <li class="lista-item item-sesion" activeclass="activo"><a href="/admin/login/logout">Cerrar Sesión<i class="fa-solid fa-right-from-bracket icono-sesion"></i></a></li>
+  </ul>
+  <button class="menu-boton" id="menu-boton">
+    <i class="fa-solid fa-bars menu-icon"></i>
+  </button>
+</nav>
+<main class="contenedor-principal">
+  <h2 class="titulo-seccion titulo-novedades">Novedades</h2>
+  <button class="contenedor-agregar"><a class="boton-agregar" href="/admin/novedades/agregar">Agregar Novedad<i class="fas fa-plus icono-agregar"></i></a></button>
+  <div class="contenedor-novedades">
+    <table class="contenedor-novedad">
+      <tr>
+        <th class="encabezado encabezado-id">#</th>
+        <th class="encabezado encabezado-titulo">Título</th>
+        <th class="encabezado encabezado-imagen">Imagen</th>
+        <th class="encabezado encabezado-acciones">Acciones</th>
+      </tr>
+      {{#each novedades}}
+      <tr>
+        <td class="novedad-id">{{id_novedad}}</td>
+        <td class="novedad-titulo">{{titulo}}</td>
+        <td class="novedad-imagen">{{{imagen}}}</td>
+        <td class="novedad-acciones">
+          <div class="contenedor-botones">
+            <a href="/admin/novedades/editar/{{id_novedad}}"><i class="fa-solid fa-pencil boton-editar"></i></a>
+            <a href="/admin/novedades/eliminar/{{id_novedad}}"><i class="fas fa-trash-alt boton-eliminar"></i></a>
+          </div>
+        </td>
+      </tr>
+      {{/each}}
+    </table>
+  </div>
+</main>

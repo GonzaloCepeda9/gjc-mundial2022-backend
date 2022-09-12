@@ -1,0 +1,235 @@
+/* Inicio de estilo del HEADER */
+
+.contenedor-header {
+  min-height: 160px;
+  width: 100%;
+  padding: 20px 0;
+  background: url(../images/FondoHeader2.png), no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #f0f8ff;
+}
+
+.header-titulo {
+  margin-left: 32px;
+  color: #acb4bc;
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: 40px;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 1px #000;
+}
+
+/* Fin de estilo del HEADER */
+
+
+/* Inicio de estilo del NAV */
+
+.contenedor-nav {
+  width: 100%;
+  min-height: 32px;
+  font-family: 'Proza Libre', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #072d4f;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.nav-lista {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.lista-item {
+  margin: 0 32px;
+}
+
+.item-usuario {
+  list-style-type: none;
+  font-weight: bold;
+  color: #0ead0e;
+  text-shadow: 2px 0px 1px #000;
+}
+
+.item-sesion {
+  padding: 4px;
+  background-color: #e50404;
+  color: #fff;
+  border: 1px solid #000;
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow: 2px 1px 1px #000;
+  cursor: pointer;
+}
+
+.icono-sesion {
+  margin-left: 4px;
+}
+
+nav ul li a {
+  color: #eaeaea;
+  text-shadow: 0px 0px 5px #000;
+  text-decoration: none;
+}
+
+/* Fin de estilo del NAV */
+
+
+/* Inicio de estilo del FOOTER */
+
+.contenedor-footer {
+  width: 100%;
+  height: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #acb4bc;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fin de estilo del FOOTER */
+
+
+
+/* 
+  INICIO 
+    DEL
+      ESTILO
+        RESPONSIVE
+            */
+
+/* Inicio de estilo RESPONSIVE para CELULAR */
+
+@media screen and (max-width: 480px) {
+
+  /* Inicio HEADER */
+
+  .contenedor-header {
+    height: calc(160px * 0.7);
+    flex-direction: column;
+  }
+
+  .header-logo {
+    width: calc(128px * 0.7);
+    height: calc(128px * 0.7);
+    box-shadow: 0 0 3px #f0f8ff;
+  }
+
+  .header-titulo {
+    margin: 8px 0;
+    letter-spacing: 3px;
+    font-size: calc(40px * 0.7);
+    text-shadow: 2px 2px 1px #000;
+  }
+
+  /* Fin HEADER */
+
+  /* Inicio NAV */
+
+  .nav-lista {
+    flex-direction: column;
+    transform: translateX(-100vw);
+    position: absolute;
+    z-index: -1;
+    transition: 0.3s;
+    background-color: #072d4f;
+    width: 100%;
+  }
+
+  .nav-lista li {
+    margin: 24px;
+    font-size: calc(16px * 0.9);
+  }
+
+  .menu-boton {
+    display: block;
+    position: absolute;
+    right: 8px;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  .nav-lista--show {
+    transform: translateX(0);
+    transform: translateY(50%);
+    z-index: 10;
+  }
+
+  /* Fin NAV */
+
+  /* Inicio FOOTER */
+
+  .contenedor-footer {
+    height: calc(60px * 0.7);
+    font-size: calc(16px * 0.7);
+    padding: calc(12px*0.7);
+  }
+
+  /* Fin FOOTER*/
+
+}
+
+/* Fin de estilo RESPONSIVE para CELULAR */
+
+
+/* Inicio de estilo RESPONSIVE para TABLET */
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+
+  /* Inicio HEADER */
+
+  .contenedor-header {
+    height: calc(160px * 0.9);
+    width: 100%;
+  }
+
+  .header-logo {
+    width: calc(128px * 0.9);
+    height: calc(128px * 0.9);
+    box-shadow: 0 0 4px #f0f8ff;
+  }
+
+  .header-titulo {
+    margin-left: calc(32px * 0.9);
+    letter-spacing: 4px;
+    font-size: calc(40px * 0.9);
+    text-shadow: 2px 2px 1px #000;
+  }
+
+  /* Fin HEADER */
+
+  /* Inicio NAV */
+
+  .nav-lista li {
+    font-size: calc(16px * 0.9);
+  }
+
+  /* Fin NAV */
+
+  /* Inicio FOOTER */
+
+  .contenedor-footer {
+    height: calc(60px * 0.9);
+    font-size: calc(16px * 0.9);
+    padding: calc(12px * 0.9);
+  }
+
+  /* Fin FOOTER */
+
+}
+
+/* Fin de estilo RESPONSIVE para TABLET */

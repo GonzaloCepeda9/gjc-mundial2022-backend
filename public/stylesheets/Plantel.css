@@ -1,0 +1,215 @@
+/* Inicio de estilo para ESCRITORIO */
+
+.contenedor-plantel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor-jugador {
+  width: 200px;
+  height: 350px;
+  margin: 24px;
+  padding-top: 8px;
+  background-color: #052545;
+  box-shadow: 2px 2px 2px #000;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.jugador-imagen {
+  width: 150px;
+  height: 150px;
+}
+
+.jugador-imagen img {
+  background-color: #fff;
+  background: linear-gradient(180deg, rgba(131, 137, 144, 1) 0%, rgba(173, 192, 212, 1) 50%, rgba(217, 229, 244, 1) 95%, rgba(255, 255, 255, 1) 100%);
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0px 0px 4px #fff;
+}
+
+.texto {
+  margin: 12px;
+  text-align: center;
+  text-shadow: 2px 0 2px #000;
+  text-shadow: 1px 0 1px #fff;
+}
+
+.texto-nombre {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 16px;
+  letter-spacing: 1px;
+  color: #555;
+  text-align: center;
+}
+
+.texto-posicion {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 200;
+  font-weight: bold;
+  color: #999;
+  text-align: center;
+}
+
+.texto-edad,
+.texto-club {
+  font-size: 14px;
+  color: #777;
+}
+
+.boton-modificar,
+.boton-borrar {
+  margin: 8px;
+  font-size: 24px;
+  color: #096609;
+}
+
+/* Inicio DT */
+
+.div-dt {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor-dt {
+  color: #fff;
+  background-color: #000;
+  box-shadow: 1px 1px 1px #999;
+}
+
+/* Fin DT */
+
+/* Fin de estilo para ESCRITORIO */
+
+
+/* Inicio de estilo RESPONSIVE para CELULAR */
+
+@media screen and (max-width: 480px) {
+
+  .contenedor-jugador {
+    width: calc(200px * 0.8);
+    height: calc(350px * 0.8);
+    margin: calc(24px * 0.8);
+    padding-top: calc(8px * 0.8);
+    background-color: #052545;
+    box-shadow: 1px 1px 1px #000;
+    border-radius: calc(8px * 0.8);
+  }
+
+  .jugador-imagen {
+    width: calc(150px * 0.8);
+    height: calc(150px * 0.8);
+  }
+
+  .jugador-imagen img {
+    box-shadow: 0px 0px 3px #fff;
+  }
+
+  .texto {
+    margin: calc(12px * 0.8);
+    text-shadow: 1px 0 1px #fff;
+  }
+
+  .texto-nombre {
+    font-size: calc(18px * 0.8);
+    margin-top: calc(16px * 0.8);
+    letter-spacing: 1px;
+    color: #555;
+  }
+
+  .texto-posicion {
+    font-size: calc(14px * 0.8);
+    color: #999;
+  }
+
+  .texto-edad,
+  .texto-club {
+    font-size: calc(14px * 0.8);
+    color: #777;
+  }
+
+  /* Inicio DT Responsive */
+
+  .contenedor-dt {
+    color: #fff;
+    background-color: #000;
+    box-shadow: 1px 1px 2px #666;
+  }
+
+  /* Fin DT Responsive */
+
+}
+
+/* Fin de estilo RESPONSIVE para CELULAR */
+
+
+/* Inicio de estilo RESPONSIVE para TABLET */
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+
+  .contenedor-jugador {
+    width: calc(200px * 0.9);
+    height: calc(350px * 0.9);
+    margin: calc(24px * 0.9);
+    padding-top: calc(8px * 0.9);
+    box-shadow: 1.5px 1.5px 1.5px #000;
+    border-radius: calc(8px * 0.9);
+  }
+
+  .jugador-imagen {
+    width: calc(150px * 0.9);
+    height: calc(150px * 0.9);
+  }
+
+  .jugador-imagen img {
+    box-shadow: 0px 0px 3px #fff;
+  }
+
+  .texto {
+    margin: calc(12px * 0.9);
+    text-shadow: 1px 0 1px #fff;
+  }
+
+  .texto-nombre {
+    font-size: calc(18px * 0.9);
+    margin-top: calc(16px * 0.9);
+    letter-spacing: 1px;
+    color: #555;
+  }
+
+  .texto-posicion {
+    font-size: calc(14px * 0.9);
+    color: #999;
+  }
+
+  .texto-edad,
+  .texto-club {
+    font-size: calc(14px * 0.9);
+    color: #777;
+  }
+
+  /* Inicio DT Responsive */
+
+  .contenedor-dt {
+    color: #fff;
+    background-color: #000;
+    box-shadow: 1px 1px 2px #666;
+  }
+
+  /* Fin DT Responsive */
+
+}
+
+/* Fin de estilo RESPONSIVE para TABLET */

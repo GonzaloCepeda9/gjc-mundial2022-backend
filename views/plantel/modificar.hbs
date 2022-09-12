@@ -1,0 +1,45 @@
+<nav class="contenedor-nav">
+  <ul class="nav-lista">
+    <li class="lista-item item-usuario" activeclass="activo">{{nombre}}</li>
+    <li class="lista-item" activeclass="activo"><a href="/admin/plantel">Plantel</a></li>
+    <li class="lista-item" activeclass="activo"><a href="/admin/novedades">Novedades</a></li>
+    <li class="lista-item item-sesion" activeclass="activo"><a href="/admin/login/logout">Cerrar Sesión<i class="fa-solid fa-right-from-bracket icono-sesion"></i></a></li>
+  </ul>
+</nav>
+<main class="contenedor-principal">
+  <h2 class="titulo-seccion">Modificar Jugador</h2>
+  <form class="contenedor-formulario" action="/admin/plantel/modificar" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="{{jugador.id_jugador}}" />
+    <div class="contenedor-secundario">
+      <label class="formulario-label formulario-label-1" for="imagen_jugador">Imagen</label>
+      <input class="formulario-input formulario-archivo" name="imagen_jugador" type="file" id="imagen_jugador" />
+    </div>
+    <input type="checkbox" name="img_delete" value="1" id="img_delete" />
+    <span>Eliminar imagen actual.</span>
+    <input type="hidden" name="img_original" value="{{jugador.id_img_jugador}}" />
+    <div class="contenedor-secundario">
+      <label class="formulario-label" for="nombre">Nombre</label>
+      <input class="formulario-input" placeholder="Nombre del jugador..." name="nombre" value="{{jugador.nombre}}" type="text" />
+    </div>
+    <div class="contenedor-secundario">
+      <label class="formulario-label" for="apellido">Apellido</label>
+      <input class="formulario-input" placeholder="Apellido del jugador..." name="apellido" value="{{jugador.apellido}}" type="text" />
+    </div>
+    <div class="contenedor-secundario">
+      <label class="formulario-label" for="edad">Edad</label>
+      <input class="formulario-input" placeholder="Edad del jugador..." name="edad" value="{{jugador.edad}}" type="text" />
+    </div>
+    <div class="contenedor-secundario">
+      <label class="formulario-label" for="posicion">Posición</label>
+      <input class="formulario-input" placeholder="Posición del jugador..." name="posicion" value="{{jugador.posicion}}" type="text" />
+    </div>
+    <div class="contenedor-secundario">
+      <label class="formulario-label" for="club">Club</label>
+      <input class="formulario-input" placeholder="Club actual del jugador..." name="club" value="{{jugador.club}}" type="text" />
+    </div>
+    <button class="formulario-boton" type="submit">Modificar</button>
+  </form>
+  {{#if error}}
+  <p class="mensaje-error">{{message}}</p>
+  {{/if}}
+</main>

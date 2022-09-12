@@ -1,0 +1,20 @@
+<nav class="contenedor-nav">
+  <ul>
+    <li class="item-usuario">Panel del usuario</li>
+  </ul>
+</nav>
+<main class="contenedor-principal">
+  <h2 class="titulo-seccion">Inicio de Sesión</h2>
+  <form class="contenedor-formulario" action="/admin/login" method="post">
+    <div class="contenedor-secundario">
+      <input class="formulario-input" placeholder="Usuario" id="usuario" type="text" name="usuario">
+    </div>
+    <div class="contenedor-secundario">
+      <input class="formulario-input" placeholder="Contraseña" id="password" type="password" name="password">
+    </div>
+    <button class="formulario-boton" type="submit">Ingresar</button>
+    {{#if error}}
+    <p>Usuario y/o contraseña incorrecto/a.</p>
+    {{/if}}
+  </form>
+</main>

@@ -1,0 +1,45 @@
+<nav class="contenedor-nav">
+  <ul class="nav-lista">
+    <li class="lista-item item-usuario" activeclass="activo">{{nombre}}</li>
+    <li class="lista-item" activeclass="activo"><a href="/admin/plantel">Plantel</a></li>
+    <li class="lista-item" activeclass="activo"><a href="/admin/novedades">Novedades</a></li>
+    <li class="lista-item item-sesion" activeclass="activo"><a href="/admin/login/logout">Cerrar Sesión<i class="fa-solid fa-right-from-bracket icono-sesion"></i></a></li>
+  </ul>
+</nav>
+<main class="contenedor-principal">
+  <h2 class="titulo-seccion titulo-plantel">Mundial de Qatar 2022</h2>
+  <button class="contenedor-incorporar"><a class="boton-incorporar" href="/admin/plantel/incorporar">Incorporar Jugador<i class="fas fa-plus icono-incorporar"></i></a></button>
+  <h3>Posibles convocados a la selección Argentina:</h3>
+  <div class="contenedor-plantel">
+    {{#each jugadores}}
+    <div class="contenedor-jugador">
+      <div class="jugador-imagen">
+        {{{imagen_jugador}}}
+      </div>
+      <div class="jugador-texto">
+        <h4 class="texto texto-nombre">{{nombre}} {{apellido}}</h4>
+        <h5 class="texto texto-posicion">{{posicion}}</h5>
+        <p class="texto texto-edad">Edad: {{edad}} años</p>
+        <p class="texto texto-club">Club: {{club}}</p>
+        <div class="contenedor-botones">
+          <a href="/admin/plantel/modificar/{{id_jugador}}"><i class="fa-solid fa-pencil boton-modificar"></i></a>
+          <a href="/admin/plantel/borrar/{{id_jugador}}"><i class="fas fa-trash-alt boton-borrar"></i></a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    <div class="div-dt">
+      <div class="contenedor-jugador contenedor-dt">
+        <div class="jugador-imagen">
+          <img class="imagen-scaloni" src="/images/LionelScaloni2.png" alt="" />
+        </div>
+        <div class="jugador-texto">
+          <h4 class="texto texto-nombre">Lionel Scaloni</h4>
+          <h5 class="texto texto-posicion">Director Técnico</h5>
+          <p class="texto texto-club">Selección Argentina</p>
+          <p class="texto texto-edad">Edad: 44 años</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

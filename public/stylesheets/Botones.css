@@ -1,0 +1,105 @@
+/* Inicio de estilo para ESCRITORIO */
+
+.contenedor-agregar,
+.contenedor-incorporar {
+  padding: 12px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #096609;
+  border-radius: 16px;
+  text-shadow: 2px 1px 2px #000;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+
+.boton-agregar,
+.boton-incorporar {
+  color: #fff;
+  text-decoration: none;
+}
+
+.icono-agregar,
+.icono-incorporar {
+  margin-left: 8px;
+}
+
+.contenedor-botones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton-editar,
+.boton-eliminar,
+.boton-modificar,
+.boton-borrar {
+  margin: 8px;
+  font-size: 32px;
+  color: #096609;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+/* Fin de estilo para ESCRITORIO */
+
+
+/* Inicio de estilo RESPONSIVE para CELULAR */
+
+@media screen and (max-width: 480px) {
+
+
+  .contenedor-agregar,
+  .contenedor-incorporar {
+    padding: calc(12px * 0.7);
+    margin-bottom: calc(16px * 0.7);
+    font-size: calc(16px * 0.7);
+  }
+
+  .icono-agregar,
+  .icono-incorporar {
+    margin-left: calc(8px * 0.7);
+  }
+
+  .boton-editar,
+  .boton-eliminar,
+  .boton-modificar,
+  .boton-borrar {
+    margin: calc(8px * 0.7);
+    font-size: calc(32px * 0.5);
+    text-shadow: 0.5px 0.5px 1px #fff;
+  }
+
+}
+
+/* Fin de estilo RESPONSIVE para CELULAR */
+
+
+/* Inicio de estilo RESPONSIVE para TABLET */
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+
+  .contenedor-agregar,
+  .contenedor-incorporar {
+    padding: calc(12px * 0.9);
+    margin-bottom: calc(16px * 0.9);
+    font-size: calc(16px * 0.9);
+    text-shadow: 2px 1px 2px #000;
+  }
+
+  .icono-agregar,
+  .icono-incorporar {
+    margin-left: calc(8px * 0.9);
+  }
+
+  .boton-editar,
+  .boton-eliminar,
+  .boton-modificar,
+  .boton-borrar {
+    margin: calc(8px * 0.9);
+    font-size: calc(32px * 0.7);
+  }
+
+}
+
+/* Fin de estilo RESPONSIVE para TABLET */

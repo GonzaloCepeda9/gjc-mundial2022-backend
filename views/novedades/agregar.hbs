@@ -1,0 +1,33 @@
+<nav class="contenedor-nav">
+  <ul class="nav-lista">
+    <li class="lista-item item-usuario" activeclass="activo">{{nombre}}</li>
+    <li class="lista-item" activeclass="activo"><a href="/admin/plantel">Plantel</a></li>
+    <li class="lista-item" activeclass="activo"><a href="/admin/novedades">Novedades</a></li>
+    <li class="lista-item item-sesion" activeclass="activo"><a href="/admin/login/logout">Cerrar Sesión<i class="fa-solid fa-right-from-bracket icono-sesion"></i></a></li>
+  </ul>
+</nav>
+<main class="contenedor-principal">
+  <h2 class="titulo-seccion">Agregar Novedad</h2>
+  <form class="contenedor-formulario" action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
+    <div class="contenedor-secundario">
+      <label class="formulario-label formulario-label-1" for="titulo">Título</label>
+      <input class="formulario-input" placeholder="Título de la novedad..." name="titulo" type="text" />
+    </div>
+    <div class="contenedor-secundario">
+      <label class="formulario-label" for="imagen">Imagen</label>
+      <input class="formulario-input formulario-archivo" type="file" name="imagen" id="imagen" />
+    </div>
+    <div class="contenedor-secundario">
+      <label class="formulario-label" for="subtitulo">Subtítulo</label>
+      <input class="formulario-input" placeholder="Subtítulo de la novedad..." name="subtitulo" type="text"/>
+    </div>
+    <div class="contenedor-secundario">
+      <label class="formulario-label" for="cuerpo">Cuerpo</label>
+      <textarea class="formulario-textarea" placeholder="Cuerpo de la novedad..." name="cuerpo"></textarea>
+    </div>
+    <button class="formulario-boton" type="submit">Agregar</button>
+  </form>
+  {{#if error}}
+    <p class="mensaje-error">{{message}}</p>
+  {{/if}}
+</main>

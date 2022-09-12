@@ -1,0 +1,136 @@
+/* Inicio de estilo de FORMULARIOS*/
+
+.login-contenedor {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.contenedor-formulario {
+  min-width: 200px;
+}
+
+.contenedor-secundario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario-input,
+.formulario-textarea {
+  width: 400px;
+  margin: 8px;
+  padding: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  border: none;
+  box-shadow: 1px 1px 2px #072d4f;
+  border-radius: 8px;
+  opacity: 0.9;
+}
+
+.formulario-archivo {
+  width: 400px;
+  font-weight: 100;
+  color: #999;
+  background-color: #fff;
+}
+
+.formulario-label {
+  margin-top: 16px;
+  font-weight: bold;
+  color: #cce4f4;
+  text-shadow: 2px 1px 1px #000;
+  display: block;
+}
+
+.formulario-label-1 {
+  margin-top: 0;
+}
+
+.formulario-textarea {
+  height: 200px;
+}
+
+.formulario-boton {
+  max-width: 400px;
+  min-width: 324px;
+  min-height: 24px;
+  margin: 12px 0;
+  padding: 4px;
+  font-size: 13px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #175c98;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 1px 1px 1px #072d4f;
+  border: 1.5px groove #000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.formulario-input::placeholder,
+.formulario-textarea::placeholder {
+  font-weight: 400;
+}
+
+.formulario-input:focus,
+.formulario-textarea:focus {
+  outline: 2px solid #2c6ca3;
+}
+
+.formulario-boton:hover {
+  background-color: #2c6ca3;
+}
+
+.formulario-boton:active {
+  background-color: #15426a;
+}
+
+/* Fin de estilo de FORMULARIOS */
+
+
+/* Inicio de estilo RESPONSIVE para CELULAR */
+
+@media screen and (max-width: 480px) {
+
+  .contenedor-secundario {
+    font-size: calc(16px * 0.8);
+  }
+
+  .formulario-input,
+  .formulario-textarea {
+    width: 80%;
+  }
+
+  .formulario-archivo {
+    width: 80%;
+  }
+
+  .formulario-boton {
+    width: 80%;
+    min-width: 80%;
+    font-size: calc(13px * 0.8);
+  }
+
+}
+
+/* Fin de estilo RESPONSIVE para CELULAR */
+
+
+/* Inicio de estilo RESPONSIVE para TABLET */
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+
+  .formulario-input,
+  .formulario-textarea {
+    width: 324px;
+  }
+
+}
+
+/* Fin de estilo RESPONSIVE para TABLET */
