@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 17-09-2022 a las 00:34:02
+-- Tiempo de generación: 18-09-2022 a las 15:26:33
 -- Versión del servidor: 5.7.36
 -- Versión de PHP: 7.4.26
 
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `jugadores` (
   `posicion` varchar(50) NOT NULL,
   `club` varchar(50) NOT NULL,
   PRIMARY KEY (`id_jugador`)
-) ENGINE=MyISAM AUTO_INCREMENT=94 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=95 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `jugadores`
