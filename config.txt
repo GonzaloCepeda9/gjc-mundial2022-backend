@@ -2,4 +2,4 @@ CLEARDB_DATABASE_URL: mysql://beec2c47bcb3e6:23951ae4@us-cdbr-east-06.cleardb.ne
 DB name: 	heroku_b51d59fab5d9d75 
 Host: 		us-cdbr-east-06.cleardb.net 
 Password: 	23951ae4 
-User: 		beec2c47bcb3e6 
+User: 		beec2c47bcb3e6
