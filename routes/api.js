@@ -58,29 +58,4 @@ router.get("/plantel", async function (req, res, next) {
 
 });
 
-router.post("/contacto", async (req, res) => {
-  const mail = {
-    to: "gjcepeda9@gmail.com",
-    subject: "Contacto Web",
-    html: `${req.body.nombre} se contactó a través de la web y quiere más información a este correo: ${req.body.correo}. <br> Además, hizo el siguiente comentario: ${req.body.mensaje}.`
-  }
-
-  const transport = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: process.env.SMTP_PORT,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMPT_PASS
-    }
-  });
-
-  await transport.sendMail(mail)
-
-  res.status(201).json({
-    error: false,
-    message: "Mensaje Enviado"
-  });
-  
-});
-
 module.exports = router;
