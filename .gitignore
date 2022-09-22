@@ -24,3 +24,4 @@ yarn-error.log*
 
 #base de datos
 .env
+config.txt
