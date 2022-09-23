@@ -3,7 +3,7 @@ var pool = require("./bd");
 /* Función para MOSTRAR jugadores */
 
 async function mostrarJugadores() {
-  var query = "select * from jugadores";
+  var query = "select * from jugadores order by posicion";
   var rows = await pool.query(query);
   return rows;
 }
