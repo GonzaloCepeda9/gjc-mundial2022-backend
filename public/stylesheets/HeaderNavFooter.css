@@ -20,11 +20,11 @@
 }
 
 .header-titulo {
-  margin-left: 32px;
   color: #acb4bc;
   font-family: 'Mouse Memoirs', sans-serif;
+  letter-spacing: 5px;
   font-size: 40px;
-  letter-spacing: 4px;
+  margin-left: 32px;
   text-shadow: 2px 2px 1px #000;
 }
 
@@ -132,7 +132,7 @@ nav ul li a {
   .header-titulo {
     margin: 8px 0;
     letter-spacing: 3px;
-    font-size: calc(40px * 0.7);
+    font-size: calc(40px * 0.6);
     text-shadow: 2px 2px 1px #000;
   }
 
