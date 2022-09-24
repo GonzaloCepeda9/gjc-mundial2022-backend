@@ -85,6 +85,35 @@ nav ul li a {
   text-decoration: none;
 }
 
+/* Menú */
+
+.contenedor-menu {
+  width: 20px;
+  filter: invert(1);
+  display: none;
+  position: absolute;
+  top: 204px;
+  right: 8px;
+  cursor: pointer;
+  z-index: 30;
+}
+
+.contenedor-menu label {
+  cursor: pointer;
+}
+
+.contenedor-menu label img {
+  width: 100%;
+}
+
+.menu-checkbox {
+  display: none;
+}
+
+.menu-checkbox:checked + .nav-lista {
+  transform: translateY(0);
+}
+
 /* Fin de estilo del NAV */
 
 
@@ -144,7 +173,7 @@ nav ul li a {
     flex-direction: column;
     transform: translateX(-100vw);
     position: absolute;
-    z-index: -1;
+    top: 201px;
     transition: 0.3s;
     background-color: #072d4f;
     width: 100%;
@@ -152,21 +181,13 @@ nav ul li a {
 
   .nav-lista li {
     margin: 24px;
-    font-size: calc(16px * 0.9);
+    font-size: calc(16px * 0.7);
   }
 
-  .menu-boton {
+  /* Menú */
+
+  .contenedor-menu {
     display: block;
-    position: absolute;
-    right: 8px;
-    cursor: pointer;
-    z-index: 20;
-  }
-
-  .nav-lista--show {
-    transform: translateX(0);
-    transform: translateY(50%);
-    z-index: 10;
   }
 
   /* Fin NAV */
@@ -215,8 +236,41 @@ nav ul li a {
   /* Inicio NAV */
 
   .nav-lista li {
-    font-size: calc(16px * 0.9);
+    font-size: calc(16px * 0.8);
   }
+  
+  .lista-item {
+    margin: 0 20px;
+  }
+  
+  .item-usuario {
+    list-style-type: none;
+    font-weight: bold;
+    color: #0ead0e;
+    text-shadow: 2px 0px 1px #000;
+  }
+  
+  .item-sesion {
+    padding: 4px;
+    background-color: #e50404;
+    color: #fff;
+    border: 1px solid #000;
+    font-size: 14px;
+    font-weight: 500;
+    text-shadow: 2px 1px 1px #000;
+    cursor: pointer;
+  }
+  
+  .icono-sesion {
+    margin-left: 4px;
+  }
+  
+  nav ul li a {
+    color: #eaeaea;
+    text-shadow: 0px 0px 5px #000;
+    text-decoration: none;
+  }
+  
 
   /* Fin NAV */
 
